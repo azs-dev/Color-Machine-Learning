@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="//unpkg.com/brain.js" defer></script>
+    <script src="script.js" defer></script>
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+        transition: 1s;
+      }
+
+      #question {
+        color: white;
+        text-align: center;
+        margin-top: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 300;
+      }
+
+      .container {
+        height: 300px;
+        width: 600px;
+        margin: auto;
+        margin-top: 200px;
+        justify-content: center;
+      }
+
+      .ai-guess {
+        display: flex;
+      }
+
+      .ai-guess h2 {
+        flex: 0 0 35%;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+      }
+
+      .ai-colorbox {
+        flex: 1;
+        background-color: blue;
+        border: 2px solid black;
+        border-radius: 5px;
+        transition: 1s;
+      }
+
+      .btns {
+        text-align: center;
+        margin-top: 120px;
+      }
+
+      .btns button {
+        margin: 1px;
+        border: 2px solid black;
+        border-radius: 5px;
+        font-weight: bold;
+        width: 120px;
+        height: 30px;
+      }
+
+      #yellow-button {
+        background-color: yellow;
+      }
+
+      #orange-button {
+        background-color: orange;
+      }
+      #red-button {
+        background-color: red;
+      }
+      #purple-button {
+        background-color: purple;
+      }
+      #blue-button {
+        background-color: blue;
+      }
+      #green-button {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body id="color-element">
+    <h1 id="question">What color is complementary to the background?</h1>
+    <div class="btns">
+      <button id="yellow-button">Yellow</button>
+      <button id="orange-button">Orange</button>
+      <button id="red-button">Red</button>
+      <button id="purple-button">Purple</button>
+      <button id="blue-button">Blue</button>
+      <button id="green-button">Green</button>
+      <button id="print">Print Data</button>
+    </div>
+    <div class="container">
+      <div class="ai-guess">
+        <h2>Alexa (ai):</h2>
+        <div id="ai-colorbox" class="ai-colorbox"></div>
+      </div>
+    </div>
+  </body>
+</html>
